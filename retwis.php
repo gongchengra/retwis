@@ -39,7 +39,8 @@ function redisLink() {
     static $r = false;
 
     if ($r) return $r;
-    $r = new Predis\Client();
+//    $r = new Predis\Client();
+    $r = new Predis\Client(['host'=>'redis', 'port'=>'6379']);
     return $r;
 }
 
